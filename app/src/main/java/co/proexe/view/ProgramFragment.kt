@@ -61,13 +61,13 @@ class ProgramFragment : Fragment(), ItemClickListener, IView<ProgramState> {
         }
     }
 
-    override fun onItemOptionsClicked(isSelected: Boolean) {
+    override fun onItemOptionsClicked() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.intents.send(ProgramIntent.OptionsSelected)
         }
     }
 
-    override fun onItemClicked(isClicked: Boolean) {
+    override fun onItemClicked() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.intents.send(ProgramIntent.MovieClicked)
         }

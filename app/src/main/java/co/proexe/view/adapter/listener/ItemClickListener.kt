@@ -2,7 +2,7 @@ package co.proexe.view.adapter.listener
 
 interface ItemClickListener {
 
-    fun onItemOptionsClicked(isSelected: Boolean)
+    fun onItemOptionsClicked()
 
-    fun onItemClicked(isClicked: Boolean)
+    fun onItemClicked()
 }

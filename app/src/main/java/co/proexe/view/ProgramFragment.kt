@@ -42,16 +42,22 @@ class ProgramFragment : Fragment(), ItemClickListener, IView<ProgramState> {
         super.onViewCreated(view, savedInstanceState)
 
         binding.programRecyclerView.adapter = adapter
+
+        viewModel.state.observe(viewLifecycleOwner) {
+            render(it)
+        }
     }
 
     override fun render(state: ProgramState) {
-        when (state.programViewState) {
-            is ProgramViewState.Initiating -> {}
-            is ProgramViewState.ProgramsReceived -> {
-                adapter.submitList(state.programViewState.programList)
+        with(state) {
+            when (programViewState) {
+                is ProgramViewState.Initiating -> {}
+                is ProgramViewState.ProgramsReceived -> {
+                    adapter.submitList(programViewState.programList)
+                }
+                is ProgramViewState.OptionsSelected -> showTost(getString(R.string.opt_clicked))
+                is ProgramViewState.MovieClicked -> showTost(getString(R.string.item_clicked))
             }
-            is ProgramViewState.OptionsSelected -> showTost(getString(R.string.opt_clicked))
-            is ProgramViewState.MovieClicked -> showTost(getString(R.string.item_clicked))
         }
     }
 

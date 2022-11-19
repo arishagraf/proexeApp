@@ -29,6 +29,9 @@ class ProgramViewModel @Inject constructor(
         get() = _state
 
     init {
+        viewModelScope.launch {
+            intents.send(ProgramIntent.FetchProgram)
+        }
         handlerIntent()
     }
 

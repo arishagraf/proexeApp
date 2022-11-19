@@ -1,7 +1,6 @@
 package co.proexe.di
 
-import com.example.domain.usecase.GetProgramUseCase
-import com.example.domain.usecase.GetProgramUseCaseImpl
+import com.example.domain.usecase.*
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -12,5 +11,11 @@ import dagger.hilt.components.SingletonComponent
 abstract class DomainModule {
 
     @Binds
-    abstract fun bindProgramUseCase(getProgramUseCaseImpl: GetProgramUseCaseImpl): GetProgramUseCase
+    abstract fun bindGetProgramUseCase(getProgramUseCaseImpl: GetProgramUseCaseImpl): GetProgramUseCase
+
+    @Binds
+    abstract fun bindShowProgramUseCase(showProgramUseCaseImpl: ShowProgramUseCaseImpl): ShowProgramUseCase
+
+    @Binds
+    abstract fun bindTabsUseCase(getTabsUseCaseImpl: GetTabsUseCaseImpl): GetTabsUseCase
 }

@@ -1,4 +1,4 @@
-package co.proexe.model.data
+package com.example.domain.model
 
 enum class TvProgrammeCategory {
     ALL,

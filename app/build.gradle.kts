@@ -48,9 +48,14 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
 
+    implementation("com.squareup.picasso:picasso:2.71828")
+
     kapt("com.google.dagger:hilt-android-compiler:2.42")
     implementation("com.google.dagger:hilt-android:2.42")
 
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
 }

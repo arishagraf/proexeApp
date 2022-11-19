@@ -1,4 +1,4 @@
-package co.proexe.utils
+package co.proexe.utils.mvi
 
 import androidx.lifecycle.LiveData
 import kotlinx.coroutines.channels.Channel

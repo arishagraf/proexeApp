@@ -15,6 +15,6 @@ class GetProgramUseCaseImpl @Inject constructor(
 ) : BaseUseCase<Unit, None>(), GetProgramUseCase {
 
     override suspend fun execute(params: None) {
-        return programRepository.getPrograms()
+        programRepository.getPrograms()
     }
 }

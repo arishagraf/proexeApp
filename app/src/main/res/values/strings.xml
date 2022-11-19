@@ -14,4 +14,13 @@
     <string name="drawer_movies">Filmy</string>
     <string name="drawer_series">Seriale</string>
     <string name="drawer_kids">Dla dzieci</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="program_tv">Program TV</string>
+    <string name="main_fragment_label">Main Fragment</string>
+    <string name="enter_movie">Enter movie to find</string>
+    <string name="opt_clicked">options clicked</string>
+    <string name="item_clicked">item clicked</string>
+    <string name="coming_soon">Coming soon</string>
+    <string name="seperator">|</string>
 </resources>

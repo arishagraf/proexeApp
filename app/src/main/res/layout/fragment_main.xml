@@ -74,6 +74,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:tabBackground="@color/colorRecyclerViewTimeBackground"
             app:tabGravity="fill"
+            app:tabMode="scrollable"
             app:tabIndicatorHeight="0dp"
             app:tabRippleColor="@null"
             app:tabSelectedTextColor="@color/colorAccent"

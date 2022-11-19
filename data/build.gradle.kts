@@ -48,6 +48,9 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("javax.inject:javax.inject:1")
 
+    kapt("androidx.room:room-compiler:2.4.3")
+    implementation("androidx.room:room-ktx:2.4.3")
+
     kapt("com.google.dagger:hilt-android-compiler:2.42")
     implementation("com.google.dagger:hilt-android:2.42")
 }

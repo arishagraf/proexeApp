@@ -4,5 +4,9 @@ import com.example.domain.model.ProgramModel
 
 interface ProgramRepository{
 
-    suspend fun getPrograms(): List<ProgramModel>
+    suspend fun getPrograms()
+
+    suspend fun showPrograms(): List<ProgramModel>
+
+    suspend fun getTabs(): List<String>
 }

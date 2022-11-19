@@ -22,7 +22,7 @@ class ProgramViewHolder(
             NEW_VALUE
         )
         Picasso.get().load(changedDropBoxUrl.toUri()).into(itemBinding.image)
-        itemBinding.time.text = programModel.startTime.toString()
+        itemBinding.time.text = programModel.startTimeDateRaw.toString()
         itemBinding.song.text = programModel.type
         itemBinding.itemSelected.setOnClickListener {
             itemClickListener.onItemOptionsClicked(true)

@@ -9,6 +9,7 @@ import co.proexe.view.mvi.ProgramIntent
 import co.proexe.view.mvi.ProgramState
 import co.proexe.view.mvi.ProgramViewState
 import com.example.domain.usecase.GetProgramUseCase
+import com.example.domain.usecase.ShowProgramUseCase
 import com.example.domain.utils.None
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
@@ -18,7 +19,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ProgramViewModel @Inject constructor(
-    private val getProgramUseCase: GetProgramUseCase
+    private val showProgramUseCase: ShowProgramUseCase
 ) : ViewModel(), IModel<ProgramState, ProgramIntent> {
 
     override val intents: Channel<ProgramIntent> = Channel(Channel.UNLIMITED)
@@ -42,7 +43,7 @@ class ProgramViewModel @Inject constructor(
                     is ProgramIntent.FetchProgram -> {
                         updateState {
                             ProgramState(
-                                ProgramViewState.ProgramsReceived(getProgramUseCase.execute(None))
+                                ProgramViewState.ProgramsReceived(showProgramUseCase.execute(None))
                             )
                         }
                     }

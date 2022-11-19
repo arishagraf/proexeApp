@@ -14,7 +14,4 @@ interface TVDAO {
 
     @Query("SELECT * FROM programItems")
     fun getProgramEntity(): List<ProgramEntity>
-
-    @Query("SELECT EXISTS(SELECT * FROM programItems WHERE id = :id)")
-    fun doesProgramExist(id: Int): Boolean?
 }

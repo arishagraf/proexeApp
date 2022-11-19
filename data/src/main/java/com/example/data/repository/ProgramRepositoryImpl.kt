@@ -30,10 +30,7 @@ class ProgramRepositoryImpl @Inject constructor(
                     it.endTimeDateRaw,
                     it.progressPercent
                 )
-                val programItemExists = tvdao.doesProgramExist(programEntity.id)
-                if (programItemExists == null || programItemExists == false) {
-                    tvdao.insertProgramEntity(programEntity)
-                }
+                tvdao.insertProgramEntity(programEntity)
             }
         }
     }

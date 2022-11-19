@@ -1,10 +1,12 @@
 package co.proexe.di
 
+import co.proexe.utils.security.OkHttpTrustManager
 import com.example.data.service.ProgramService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
@@ -20,6 +22,7 @@ class NetworkModule {
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl(baseURL)
+            .client(OkHttpTrustManager().unSafeOkHttpClient().build())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

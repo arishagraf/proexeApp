@@ -13,8 +13,6 @@ android {
         minSdk = 27
         targetSdk = 32
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -38,12 +36,18 @@ android {
 dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.4")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0")
 
     implementation("javax.inject:javax.inject:1")
 
     kapt("com.google.dagger:hilt-android-compiler:2.42")
     implementation("com.google.dagger:hilt-android:2.42")
+
+    testImplementation("androidx.test.ext:junit:1.1.4")
+    testImplementation("androidx.test.espresso:espresso-core:3.5.0")
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.mockito:mockito-core:2.19.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
+    testImplementation("androidx.arch.core:core-testing:2.1.0")
+    testImplementation("androidx.test:runner:1.5.1")
+    testImplementation( "androidx.test:rules:1.5.0")
 }

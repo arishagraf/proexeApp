@@ -6,7 +6,9 @@ import co.proexe.databinding.ActivityEpgBinding
 import co.proexe.epgmvi.EPGState
 import co.proexe.epgmvi.EPGViewState
 import co.proexe.utils.IView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class EpgActivity : ComponentActivity(), IView<EPGState> {
 
     private var binding: ActivityEpgBinding? = null
